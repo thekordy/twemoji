@@ -1,0 +1,9 @@
+# Backend API service example, uses nodemon to keep server alive and watch for changes.
+emoji2image:
+  build: .
+  volumes:
+    - .:/usr/src/app
+  command: bash -c "npm install && node_modules/.bin/nodemon -L --watch /usr/src/app /usr/src/app/app.js"
+  # Expose a port to access the server locally
+  ports:
+   - "3000:3000"
