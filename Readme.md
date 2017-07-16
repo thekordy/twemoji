@@ -1,7 +1,6 @@
-Node API service to parse text, detect all unicode emojies, 
-and convert them to HTML images <img>.
+A dockrized image of https://github.com/twitter/twemoji . Provides Node API service to parse text, detect all unicode emojies, and converts them to HTML images <img>. 
 
-*Goal* is to unify emoji representation between all user interfaces.
+The main benefit is to unify emoji representation across all user interfaces.
 
 ## Usage
 
@@ -40,7 +39,15 @@ JSON response with `422` status code, in case of invalid inputs
 }
 ```
 
-## Installation using Docker
+## Installation
+
+### Install using dockerhub
+
+```bash
+docker run -d -p 3000:3000 kordy/twemoji bash -c "npm install && node_modules/.bin/nodemon -L --watch . ./app.js"
+```
+
+### Install using docker-compose
 
 ```bash
 docker-compose up -d
